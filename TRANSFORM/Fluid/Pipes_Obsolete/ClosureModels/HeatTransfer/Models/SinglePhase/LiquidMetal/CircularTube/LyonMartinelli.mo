@@ -11,7 +11,8 @@ model LyonMartinelli
   - flow in circular tubes
   - constant heat flux along tube wall
   */
-  extends TRANSFORM.Fluid.Pipes_Obsolete.ClosureModels.HeatTransfer.Models.PartialHeatTransfer_setQ_flows;
+  extends
+    TRANSFORM.Fluid.Pipes_Obsolete.ClosureModels.HeatTransfer.Models.PartialHeatTransfer_setQ_flows;
   SI.NusseltNumber[nHT] Nus "Nusselt number";
   SI.ReynoldsNumber[nHT] Res "Reynolds number";
   SI.PrandtlNumber[nHT] Prs "Prandtl number";

@@ -4,7 +4,8 @@ model NaturalCirculation
   Pipes.GenericPipe_MultiTransferSurface
                     riser(
     redeclare model Geometry =
-        TRANSFORM.Fluid.ClosureRelations.Geometry.Models.DistributedVolume_1D.StraightPipe (
+        TRANSFORM.Fluid.ClosureRelations.Geometry.Models.DistributedVolume_1D.StraightPipe
+        (
         dimension=0.01,
         length=10,
         angle=1.5707963267949,
@@ -22,7 +23,8 @@ model NaturalCirculation
   Pipes.GenericPipe_MultiTransferSurface
                     downcomer(
     redeclare model Geometry =
-        TRANSFORM.Fluid.ClosureRelations.Geometry.Models.DistributedVolume_1D.StraightPipe (
+        TRANSFORM.Fluid.ClosureRelations.Geometry.Models.DistributedVolume_1D.StraightPipe
+        (
         dimension=0.01,
         length=10,
         nV=10,
@@ -62,13 +64,14 @@ model NaturalCirculation
         extent={{10,-10},{-10,10}},
         rotation=0,
         origin={0,-20})));
-  TRANSFORM.Utilities.Visualizers.Outputs.SpatialPlot2 temperaturePlot(
+  UserInteraction.Outputs.SpatialPlot2 temperaturePlot(
     x1=riser.summary.xpos_norm,
     y1={riser.mediums[i].T for i in 1:riser.geometry.nV},
     x2=Modelica.Math.Vectors.reverse(downcomer.summary.xpos_norm),
     y2={downcomer.mediums[i].T for i in 1:downcomer.geometry.nV},
     minY1=273.15,
-    maxY1=473.15) annotation (Placement(transformation(extent={{6,-80},{56,-36}})));
+    maxY1=473.15)
+    annotation (Placement(transformation(extent={{6,-80},{56,-36}})));
   Utilities.ErrorAnalysis.UnitTests unitTests(
     printResult=false,
     n=3,
@@ -102,7 +105,7 @@ model NaturalCirculation
     height=-rampUpWallTemp1.height,
     each startTime=800)
     annotation (Placement(transformation(extent={{120,-30},{100,-10}})));
-  TRANSFORM.Utilities.Visualizers.Outputs.Bar tankLevel(
+  UserInteraction.Outputs.Bar tankLevel(
     hideConnector=true,
     input_Value=expansionTank.level,
     min=0.1,

@@ -3,7 +3,8 @@ partial model Partial_FDCond_Cylinder "BaseClass for 2D Cylindrical FD"
   import      Modelica.Units.SI;
   import Modelica.Fluid.Types.Dynamics;
   import Modelica.Constants.pi;
-  extends TRANSFORM.HeatAndMassTransfer.DiscritizedModels.ClassicalMethod.Cylindrical.BaseClasses.Partial_BaseFDCond_Cylinder;
+  extends
+    TRANSFORM.HeatAndMassTransfer.DiscritizedModels.ClassicalMethod.Cylindrical.BaseClasses.Partial_BaseFDCond_Cylinder;
   SI.Volume V_total=pi*(r_outer^2 - r_inner^2)*length
     "Total cylinder volume";
   SI.Volume Vs[nR,nZ] "Volume each node";
@@ -93,7 +94,8 @@ R_cond_axial =length/(lambda_effective*pi*(r_outer^2 - r_inner^2));
 R_cond_radial =noEvent(if r_inner < Modelica.Constants.eps then log(1/0.01)
     /(2*pi*lambda_effective*length) else log(r_outer/r_inner)/(2*pi*
     lambda_effective*length));
-  annotation (
+  annotation (experiment(StopTime=1000, __Dymola_NumberOfIntervals=1000),
+      __Dymola_experimentSetupOutput,
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
             100,100}}), graphics={
         Line(

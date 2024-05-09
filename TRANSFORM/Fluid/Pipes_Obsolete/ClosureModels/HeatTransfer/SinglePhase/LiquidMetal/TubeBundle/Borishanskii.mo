@@ -11,7 +11,8 @@ model Borishanskii
   */
   import Modelica.Math.log10;
   import Modelica.Math.exp;
-  extends TRANSFORM.Fluid.Pipes_Obsolete.ClosureModels.HeatTransfer.BaseClasses.PartialPipeFlowHeatTransfer;
+  extends
+    TRANSFORM.Fluid.Pipes_Obsolete.ClosureModels.HeatTransfer.BaseClasses.PartialPipeFlowHeatTransfer;
     parameter Real PDratio "Tube Pitch to Diameter ratio";
     Real[nHT] Pes "Peclet Number";
 equation

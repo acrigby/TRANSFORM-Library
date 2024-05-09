@@ -1,6 +1,7 @@
 within TRANSFORM.HeatAndMassTransfer.ClosureRelations.HeatTransfer.Models;
 model Nus_SinglePhase_2Region "Specify Nus | Single Phase | 2 Regions"
-  extends TRANSFORM.HeatAndMassTransfer.ClosureRelations.HeatTransfer.Models.PartialSinglePhase;
+  extends
+    TRANSFORM.HeatAndMassTransfer.ClosureRelations.HeatTransfer.Models.PartialSinglePhase;
   input SI.NusseltNumber[nHT] Nus_lam=
       Functions.SinglePhase.InternalFlow.Nu_Laminar_Local_Developed_Circular(
       Res_film,

@@ -1,7 +1,8 @@
 within TRANSFORM.HeatAndMassTransfer.FinEfficiency;
 model GenericFin
   import Modelica.Math.tanh;
-  extends TRANSFORM.HeatAndMassTransfer.FinEfficiency.BaseClasses.PartialFinEfficiency;
+  extends
+    TRANSFORM.HeatAndMassTransfer.FinEfficiency.BaseClasses.PartialFinEfficiency;
   parameter Boolean use_NonDimensional = false "=true then specify mL)";
   parameter Boolean use_adiabaticTip = true "=true then use adiabatic tip solution else convective tip";
   input SI.CoefficientOfHeatTransfer alpha "Average heat transfer coefficient" annotation(Dialog(group="Inputs",enable=not use_NonDimensional));

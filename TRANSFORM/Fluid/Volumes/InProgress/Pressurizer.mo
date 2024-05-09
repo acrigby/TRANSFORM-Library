@@ -49,7 +49,8 @@ model Pressurizer
   //     surfaceArea=surfaceArea_VL);
   replaceable model HeatTransfer_WL =
       TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.Lumped.Ideal
-    constrainedby TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.Lumped.PartialHeatTransfer_setT
+    constrainedby
+    TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.Lumped.PartialHeatTransfer_setT
     "Wall-liquid heat transfer coefficient" annotation (choicesAllMatching=true,
       Dialog(group="Closure Models: 1. Select Model 2. Set parameters"));
   HeatTransfer_WL heatTransfer_WL(
@@ -63,7 +64,8 @@ model Pressurizer
             -34}}, rotation=0)));
   replaceable model HeatTransfer_WV =
       TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.Lumped.Ideal
-    constrainedby TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.Lumped.PartialHeatTransfer_setT
+    constrainedby
+    TRANSFORM.Fluid.ClosureRelations.HeatTransfer.Models.Lumped.PartialHeatTransfer_setT
     "Wall-vapor heat transfer coefficient" annotation (choicesAllMatching=true,
       Dialog(group="Closure Models: 1. Select Model 2. Set parameters"));
   HeatTransfer_WV heatTransfer_WV(

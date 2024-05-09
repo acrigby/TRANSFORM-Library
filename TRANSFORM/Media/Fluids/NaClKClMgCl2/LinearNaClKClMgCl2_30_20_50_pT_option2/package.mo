@@ -31,6 +31,7 @@ algorithm
   lambda :=Utilities_30_20_50.lambda_T(state.T,option=2);
   annotation(Inline=true);
 end thermalConductivity;
+
 annotation (Documentation(info="<html>
 </html>"));
 end LinearNaClKClMgCl2_30_20_50_pT_option2;

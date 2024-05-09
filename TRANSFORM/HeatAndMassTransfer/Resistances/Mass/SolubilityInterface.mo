@@ -19,14 +19,12 @@ model SolubilityInterface
 equation
   port_a.n_flow + port_b.n_flow = zeros(nC);
   for i in 1:nC loop
-    if abs(nb[i]-1) <= Modelica.Constants.eps then
+    if nb[i] == 1 then
       port_a.C[i]/Ka[i] = port_b.C[i]/Kb[i];
     else
-//       port_a.C[i]/Ka[i] = (port_b.C[i]/Kb[i])^nb[i];
-      port_a.C[i]/Ka[i] = TRANSFORM.Math.regExponent_cinterp((port_b.C[i]/Kb[i]),1e-10,nb[i]);
+      port_a.C[i]/Ka[i] = (port_b.C[i]/Kb[i])^nb[i];
     end if;
   end for;
-
   annotation (
     defaultComponentName="interface",
     Icon(coordinateSystem(preserveAspectRatio=false), graphics={

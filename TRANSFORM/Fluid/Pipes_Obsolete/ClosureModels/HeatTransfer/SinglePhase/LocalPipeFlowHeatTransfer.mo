@@ -1,7 +1,8 @@
 within TRANSFORM.Fluid.Pipes_Obsolete.ClosureModels.HeatTransfer.SinglePhase;
 model LocalPipeFlowHeatTransfer
   "LocalPipeFlowHeatTransfer: Laminar and turbulent forced convection in pipes, local coefficients"
-  extends TRANSFORM.Fluid.Pipes_Obsolete.ClosureModels.HeatTransfer.BaseClasses.PartialPipeFlowHeatTransfer;
+  extends
+    TRANSFORM.Fluid.Pipes_Obsolete.ClosureModels.HeatTransfer.BaseClasses.PartialPipeFlowHeatTransfer;
 protected
   Real[nHT] Nus_turb "Nusselt number for turbulent flow";
   Real[nHT] Nus_lam "Nusselt number for laminar flow";

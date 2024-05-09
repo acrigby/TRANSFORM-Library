@@ -1,6 +1,7 @@
 within TRANSFORM.HeatAndMassTransfer.Resistances.Heat;
 model Sphere "Sphere | Radial"
-  extends TRANSFORM.HeatAndMassTransfer.Resistances.Heat.BaseClasses.PartialResistance;
+  extends
+    TRANSFORM.HeatAndMassTransfer.Resistances.Heat.BaseClasses.PartialResistance;
   input SI.Length r_in "Inner radius" annotation(Dialog(group="Inputs"));
   input SI.Length r_out "Outer radius" annotation(Dialog(group="Inputs"));
   input SI.ThermalConductivity lambda "Thermal conductivity" annotation(Dialog(group="Inputs"));

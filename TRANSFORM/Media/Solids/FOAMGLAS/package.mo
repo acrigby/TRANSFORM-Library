@@ -28,6 +28,7 @@ package FOAMGLAS "FOAMGLAS One"
   algorithm
     cp := 770.0;
   end specificHeatCapacityCp;
+
 annotation (Documentation(info="<html>
 <p>FOAMGLAS ONE. https://www.foamglas.com/en-us/products/blocks/one-standard-us</p>
 </html>"));

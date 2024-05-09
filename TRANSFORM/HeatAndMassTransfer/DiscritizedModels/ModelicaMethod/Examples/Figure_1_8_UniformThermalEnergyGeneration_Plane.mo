@@ -24,7 +24,8 @@ model Figure_1_8_UniformThermalEnergyGeneration_Plane
     use_Lambda=true,
     lambda=1,
     redeclare model Geometry =
-        TRANSFORM.HeatAndMassTransfer.ClosureRelations.Geometry.Models.Plane_1D (
+        TRANSFORM.HeatAndMassTransfer.ClosureRelations.Geometry.Models.Plane_1D
+        (
         nX=nNodes_1.k,
         length_x=L.y,
         length_y=1,
@@ -32,7 +33,7 @@ model Figure_1_8_UniformThermalEnergyGeneration_Plane
     annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
   Modelica.Blocks.Sources.IntegerConstant nNodes_1(k=10)
     annotation (Placement(transformation(extent={{-100,84},{-92,92}})));
-  TRANSFORM.Utilities.Visualizers.Outputs.SpatialPlot TemperaturePlot(
+  UserInteraction.Outputs.SpatialPlot TemperaturePlot(
     minY=20,
     maxY=180,
     maxX=1,
@@ -61,7 +62,8 @@ model Figure_1_8_UniformThermalEnergyGeneration_Plane
     use_Lambda=true,
     lambda=1,
     redeclare model Geometry =
-        TRANSFORM.HeatAndMassTransfer.ClosureRelations.Geometry.Models.Plane_1D (
+        TRANSFORM.HeatAndMassTransfer.ClosureRelations.Geometry.Models.Plane_1D
+        (
         nX=nNodes_1.k,
         length_x=L.y,
         length_y=1,
@@ -79,13 +81,14 @@ model Figure_1_8_UniformThermalEnergyGeneration_Plane
     use_Lambda=true,
     lambda=1,
     redeclare model Geometry =
-        TRANSFORM.HeatAndMassTransfer.ClosureRelations.Geometry.Models.Plane_1D (
+        TRANSFORM.HeatAndMassTransfer.ClosureRelations.Geometry.Models.Plane_1D
+        (
         nX=nNodes_1.k,
         length_x=L.y,
         length_y=1,
         length_z=1))
     annotation (Placement(transformation(extent={{-10,-70},{10,-50}})));
-  TRANSFORM.Utilities.Visualizers.Outputs.SpatialPlot TemperaturePlot1(
+  UserInteraction.Outputs.SpatialPlot TemperaturePlot1(
     minY=20,
     maxY=180,
     maxX=1,
@@ -100,7 +103,7 @@ model Figure_1_8_UniformThermalEnergyGeneration_Plane
         wall1.geometry.xs,
         {L.k}))) "X - Axial Location (cm) | T - Temperature (°C)"
     annotation (Placement(transformation(extent={{64,-46},{98,-14}})));
-  TRANSFORM.Utilities.Visualizers.Outputs.SpatialPlot TemperaturePlot2(
+  UserInteraction.Outputs.SpatialPlot TemperaturePlot2(
     minY=20,
     maxY=180,
     maxX=1,

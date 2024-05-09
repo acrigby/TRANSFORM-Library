@@ -33,32 +33,32 @@ equation
     Diagram(coordinateSystem(preserveAspectRatio=false)),
     Documentation(info="<html>
 <p>This model returns the coefficient kHs using the equation:</p>
-<p>kHs = kH0*exp(B*(T-T_ref))</p>
+<p>kHs = kH0*exp(B*T)</p>
 <p>If pre-defined data parameters are to be used then specify the row number of the desired substance(s).</p>
 <p>Below is the definition associated with each entry of the dataTable:</p>
 <table cellspacing=\"2\" cellpadding=\"0\" border=\"1\"><tr>
-<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial; color: #ffffff; background-color: #11d200;\">Index</span></b></p></td>
-<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial; color: #ffffff; background-color: #11d200;\">Description</span></b></p></td>
-<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial; color: #ffffff; background-color: #11d200;\">kH0 [mol/(m3.Pa)]</span></b></p></td>
-<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial; color: #ffffff; background-color: #11d200;\">B [1/K]</span></b></p></td>
-<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial; color: #ffffff; background-color: #11d200;\">Source</span></b></p></td>
+<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial,Helvetica,sans-serif; color: #ffffff; background-color: #11d200;\">Index</span></b></p></td>
+<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial,Helvetica,sans-serif; color: #ffffff; background-color: #11d200;\">Description</span></b></p></td>
+<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial,Helvetica,sans-serif; color: #ffffff; background-color: #11d200;\">kH0 [mol/(m3.Pa)]</span></b></p></td>
+<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial,Helvetica,sans-serif; color: #ffffff; background-color: #11d200;\">B [1/K]</span></b></p></td>
+<td style=\"background-color: #11d200\"><p align=\"center\"><b><span style=\"font-family: Arial,Helvetica,sans-serif; color: #ffffff; background-color: #11d200;\">Source</span></b></p></td>
 </tr>
 <tr>
-<td><p><span style=\"font-family: Arial;\">1</span></p></td>
-<td><p><span style=\"font-family: Arial;\">H2_LiFBeF2_66_34</span></p></td>
-<td><p align=\"center\"><span style=\"font-family: Arial;\">8.27e-9</span></p></td>
-<td><p align=\"center\"><span style=\"font-family: Arial;\">4.27e-3</span></p></td>
-<td><p align=\"center\"><span style=\"font-family: Arial;\">1. Eq. 2.13 (modified for K), pg. 72</span></p></td>
+<td><p><span style=\"font-family: Arial,Helvetica,sans-serif;\">1</span></p></td>
+<td><p><span style=\"font-family: Arial,Helvetica,sans-serif;\">H2_LiFBeF2_66_34</span></p></td>
+<td><p align=\"center\"><span style=\"font-family: Arial,Helvetica,sans-serif;\">8.27e-9</span></p></td>
+<td><p align=\"center\"><span style=\"font-family: Arial,Helvetica,sans-serif;\">4.27e-3</span></p></td>
+<td><p align=\"center\"><span style=\"font-family: Arial,Helvetica,sans-serif;\">1. Eq. 2.13 (modified for K), pg. 72</span></p></td>
 </tr>
 <tr>
-<td><p><span style=\"font-family: Arial;\">1</span></p></td>
-<td><p><span style=\"font-family: Arial;\">HF_LiFBeF2_66_34</span></p></td>
-<td><p align=\"center\"><span style=\"font-family: Arial;\">5.65e-3</span></p></td>
-<td><p align=\"center\"><span style=\"font-family: Arial;\">-4.30e-3</span></p></td>
-<td><p align=\"center\"><span style=\"font-family: Arial;\">1. Eq. 2.12 (modified for K), pg. 72</span></p></td>
+<td><p><span style=\"font-family: Arial,Helvetica,sans-serif;\">1</span></p></td>
+<td><p><span style=\"font-family: Arial,Helvetica,sans-serif;\">HF_LiFBeF2_66_34</span></p></td>
+<td><p align=\"center\"><span style=\"font-family: Arial,Helvetica,sans-serif;\">5.65e-3</span></p></td>
+<td><p align=\"center\"><span style=\"font-family: Arial,Helvetica,sans-serif;\">-4.30e-3</span></p></td>
+<td><p align=\"center\"><span style=\"font-family: Arial,Helvetica,sans-serif;\">1. Eq. 2.12 (modified for K), pg. 72</span></p></td>
 </tr>
 </table>
-<p><br><br><br><br>Source:</p>
+<p><br><br><br>Source:</p>
 <p><br>1. Stempien thesis</p>
 </html>"));
 end ExponentialTemperature_withT_reference;

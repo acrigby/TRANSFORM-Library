@@ -1,6 +1,7 @@
 within TRANSFORM.HeatAndMassTransfer.ClosureRelations.HeatTransfer.Models;
 model Alphas "Specify Heat Transfer Coefficient"
-  extends TRANSFORM.HeatAndMassTransfer.ClosureRelations.HeatTransfer.Models.PartialSinglePhase;
+  extends
+    TRANSFORM.HeatAndMassTransfer.ClosureRelations.HeatTransfer.Models.PartialSinglePhase;
   input SI.CoefficientOfHeatTransfer alpha0=0 "Coefficient of heat transfer"
     annotation (Dialog(group="Inputs"));
   input SI.CoefficientOfHeatTransfer alphas0[nHT]=fill(alpha0, nHT)

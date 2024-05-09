@@ -19,7 +19,8 @@ model part_b_CalculateHeatLoss
     exposeState_a1=false,
     exposeState_b1=true,
     redeclare model Geometry =
-        TRANSFORM.HeatAndMassTransfer.ClosureRelations.Geometry.Models.Cylinder_1D_r (
+        TRANSFORM.HeatAndMassTransfer.ClosureRelations.Geometry.Models.Cylinder_1D_r
+        (
         nR=nNodes_1.k,
         r_inner=r_p.y,
         length_z=th.y,
@@ -41,7 +42,7 @@ model part_b_CalculateHeatLoss
   TRANSFORM.HeatAndMassTransfer.BoundaryConditions.Heat.HeatFlow q_s[nNodes_1.k](
      each use_port=true) "radiation"
     annotation (Placement(transformation(extent={{40,-50},{20,-30}})));
-  TRANSFORM.Utilities.Visualizers.Outputs.SpatialPlot TemperaturePosition(
+  UserInteraction.Outputs.SpatialPlot TemperaturePosition(
     minX=0,
     x=xval,
     y=yval,
